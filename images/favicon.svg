@@ -1,4 +1,4 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="128" cy="128" r="128" fill="url(#paint0_linear_1_8)"/>
 <defs>
 <linearGradient id="paint0_linear_1_8" x1="128" y1="0" x2="128" y2="256" gradientUnits="userSpaceOnUse">
@@ -8,6 +8,28 @@
 <stop offset="0.6" stop-color="#F79A7C"/>
 <stop offset="0.8" stop-color="#F01B00"/>
 <stop offset="1" stop-color="#940000"/>
+</linearGradient>
+</defs>
+</svg> -->
+
+
+
+
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="128" cy="128" r="128" fill="url(#spectral_gradient)"/>
+<defs>
+<linearGradient id="spectral_gradient" x1="128" y1="0" x2="128" y2="256" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#9e0142"/>
+    <stop offset="0.1" stop-color="#d53e4f"/>
+    <stop offset="0.2" stop-color="#f46d43"/>
+    <stop offset="0.3" stop-color="#fdae61"/>
+    <stop offset="0.4" stop-color="#fee08b"/>
+    <stop offset="0.5" stop-color="#ffffbf"/>
+    <stop offset="0.6" stop-color="#e6f598"/>
+    <stop offset="0.7" stop-color="#abdda4"/>
+    <stop offset="0.8" stop-color="#66c2a5"/>
+    <stop offset="0.9" stop-color="#3288bd"/>
+    <stop offset="1" stop-color="#5e4fa2"/>
 </linearGradient>
 </defs>
 </svg>
