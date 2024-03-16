@@ -35,6 +35,7 @@ body {
   max-height: parent;
 
 }
+ 
 
 .publication-banner video {
   position: relative;
@@ -159,4 +160,55 @@ body {
     -moz-user-select: all; /* Firefox */
     -ms-user-select: all; /* Internet Explorer/Edge */
     user-select: all; /* Chrome and Opera */
+}
+
+
+.my-custom-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.my-custom-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-quote {
+  border-left: 4px solid #ccc; /* Classic Markdown quote style */
+  padding-left: 20px; /* Space between the text and the border */
+  margin-left: 0; /* Align with the content above it */
+  color: #666; /* Optional: Adjust text color */
+  font-style: italic; /* Optional: Italicize text */
+  background-color: #f9f9f9; /* Optional: Light background */
+}
+
+
+.tables-container {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing around each table */
+  align-items: flex-start; /* Aligns items at the start of the container */
+  flex-wrap: wrap; /* Allows tables to wrap to the next line on smaller screens */
+}
+
+.table {
+  width: calc(33.333% - 20px); /* Adjusts the width to fit 3 tables in a row, accounting for some spacing */
+  margin: 10px; /* Spacing between tables */
+}
+
+/* Optional: Basic styling for the tables to improve readability */
+.table h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table td, .table th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
