@@ -13,7 +13,7 @@
 </svg> -->
 
 
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="128" cy="128" r="128" fill="url(#spectral_gradient)"/>
 <defs>
 <linearGradient id="spectral_gradient" x1="128" y1="0" x2="128" y2="256" gradientUnits="userSpaceOnUse">
@@ -28,6 +28,21 @@
     <stop offset="0.8" stop-color="#66c2a5"/>
     <stop offset="0.9" stop-color="#3288bd"/>
     <stop offset="1" stop-color="#5e4fa2"/>
+</linearGradient>
+</defs>
+</svg> -->
+
+
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="128" cy="128" r="128" fill="url(#inferno_gradient_reversed)"/>
+<defs>
+<linearGradient id="inferno_gradient_reversed" x1="128" y1="0" x2="128" y2="256" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fdb913"/>
+    <stop offset="0.2" stop-color="#e36214"/>
+    <stop offset="0.4" stop-color="#b5367a"/>
+    <stop offset="0.6" stop-color="#721f81"/>
+    <stop offset="0.8" stop-color="#2c115f"/>
+    <stop offset="1" stop-color="#000004"/>
 </linearGradient>
 </defs>
 </svg>
