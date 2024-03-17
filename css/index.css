@@ -214,9 +214,3 @@ body {
 }
 
 
-/* Custom CSS */
-@media screen and (max-width: 768px) {
-  .publication-title {
-    font-size: 24px; /* Adjust the font size as needed */
-  }
-}
