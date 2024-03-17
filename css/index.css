@@ -216,11 +216,9 @@ body {
 }
 
 
-
 .title.is-1.publication-title {
   font-size: 2.5rem; /* Adjusted from a larger default value to make it slightly smaller */
 }
-
 
 
 .publication-authors sup {
