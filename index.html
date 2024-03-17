@@ -63,6 +63,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2</h1>
+          <!-- <h1 class="title is-1-mobile is-1-tablet is-1-desktop is-1-widescreen is-1-fullhd publication-title">🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2</h1> -->
+          
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://nandometzger.github.io/" target="_blank" rel="noopener noreferrer">
@@ -110,7 +112,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Github Code</span>
                 </a> 
               </span>
               <!-- GEE Link. -->
@@ -122,7 +124,16 @@
                   </span>
                   <span>Earth Engine Demo</span>
                 </a>
-              </span>              
+              </span>   
+              <span class="link-block">
+                <a href="https://code.earthengine.google.com/f90c3d3a77ec4dcfeb645457a87ddf48" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon" style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;"> <!-- Added background-color and border-radius -->
+                    <img src="./images/GEE_logo.png" alt="GEE Logo" style="height: 100%; object-fit: cover; object-position: center;">
+                  </span>
+                  <span>Earth Engine Code</span>
+                </a>
+              </span>             
             </div>
           </div>
         </div>
@@ -134,27 +145,34 @@
 
 
 
+
 <section class="section pt-0">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns">
+      <div class="column">
         <blockquote class="markdown-quote">
-          <strong>TL;DR:</strong> POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.
+          <strong>💡TL;DR:</strong> POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.
         </blockquote>
       </div>
     </div>  
   </div>
 </section>
+
+
 <!-- Start of GEE App Embed -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-12">
-        <iframe src="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" width="100%" height="500" style="border: none;"></iframe>
+        <iframe src="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" width="100%" height="650" style="border: none;"></iframe>
+        High resolution population maps of Rwanda derived from Sentinel-1 and Sentinel-2
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 
 
@@ -163,15 +181,15 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Time Series</h2>
         <div class="content has-text-justified">
           <p>
-            Detailed population maps play an important role in diverse fields ranging from humanitarian action to urban planning.
-            Generating such maps in a timely and scalable manner presents a challenge, especially in data-scarce regions.
-            To address it we have developed POPCORN, a population mapping method whose only inputs are free, globally available satellite images from Sentinel-1 and Sentinel-2; and a small number of aggregate population counts over coarse census districts for calibration. Despite the minimal data requirements our approach surpasses the mapping accuracy of existing schemes, including several that rely on building footprints derived from high-resolution imagery. E.g., we were able to produce population maps for Rwanda with 100m GSD based on less than 400 regional census counts.
-            In Kigali, those maps reach an score of 66% w.r.t. a ground truth reference map, with an average error of only 10 inhabitants/ha.
-            Conveniently, POPCORN retrieves explicit maps of built-up areas and of local building occupancy rates, making the mapping process interpretable and offering additional insights, for instance about the distribution of built-up, but unpopulated areas (e.g., industrial warehouses). Moreover, we find that, once trained, the model can be applied repeatedly to track population changes; and that it can be transferred to geographically similar regions with only a moderate loss in performance (e.g., from Uganda to Rwanda). With our work we aim to democratize access to up-to-date and high-resolution population maps, recognizing that some regions faced with particularly strong population dynamics may lack the resources for costly micro-census campaigns.
+            Once trained, POPCORN can be used to generate population time series, as shown in the figure below.
           </p>
+          <img id="method_train" width="100%" src="./images/series_bunia.jpg" alt="POPCORN time series"/>
+          Population time series of Bunia, DRC, derived from Sentinel-1 and Sentinel-2. The noth part of the city shows the growth of the Kigonze refugee camp.
+
+
         </div>
       </div>
     </div>
@@ -186,7 +204,37 @@
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Methodology</h2>
+        <h2 class="title is-3">Performance</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            We evaluate the performance of POPCORN on three datasets: Switzerland, Rwanda, and Puerto Rico. 
+          </p> 
+        </div>
+          
+          <img id="method_train" width="100%" src="./images/all_scatter.png" alt="POPCORN scatter plott series"/>
+          
+        <div class="content has-text-justified">
+          <p> 
+            Our ensembled version BAG-OF-POPCORN outperforms existing methods including those with access to high-resolution satellite imagery and building footprints.
+          </p> 
+        </div>
+
+          <img id="method_train" width="60%" src="./images/swiss_table.png" alt="POPCORN Swiss Performance"/>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How it works</h2>
         <div class="content has-text-justified">
 
           <p>
@@ -201,34 +249,6 @@
           <img id="method_train" width="100%" src="./images/graphical_abstract.jpg" alt="Marigold training scheme"/>
 
 
-        </div>
-      </div>
-    </div>
-    <!--/ Method. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Performance</h2>
-        <div class="content has-text-justified">
-
-          <p>
-            We evaluate the performance of POPCORN on three datasets: Switzerland, Rwanda, and Puerto Rico. 
-            The results are summarized in the table below. Our ensembled version BAG-OF-POPCORN outperforms existing methods including those with access to high-resolution satellite imagery and building footprints.
-          </p>
-
-            <!-- Place other tables here following the same pattern -->
-          </div>
-          
-          <img id="method_train" width="66%" src="./images/swiss_table.png" alt="Marigold training scheme"/>
-          <img id="method_train" width="100%" src="./images/all_scatter.png" alt="Marigold training scheme"/>
-
-
-          
         </div>
       </div>
     </div>
