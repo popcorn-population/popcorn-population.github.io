@@ -225,3 +225,7 @@ body {
   font-size: 0.666em; /* Adjusts the size of the superscript emojis */
   vertical-align: super;
 }
+
+.small-university-name {
+  font-size: 0.666rem; /* Adjust the size as needed */
+}
