@@ -166,6 +166,7 @@
 </section>
 
 
+
 <!-- Start of GEE App Embed -->
 <section class="section">
   <div class="container">
@@ -241,8 +242,12 @@
         <div class="content has-text-justified">
 
           <p>
-            The core of our method is a neural network model, termed POPCORN.
-            That model has two components:
+            The core of our method is a neural network model, termed POPCORN. It uses Sentinel-1, Sentinel-2 and a coarse population census outputs high-resolution population maps.
+          </p>
+          <img id="method_train" width="100%" src="./images/POPCORN_scheme.jpg" alt="POPCORN time series"/>
+          
+          <p>
+            The model has two components:
             (1) a pre-trained, frozen built-up area extractor;
             and (2) a building occupancy module that we train through weak supervision with coarse census counts, as illustrated in the Figure below.
             The model operates at the full Sentinel-1/-2 resolution, i.e., its output has a nominal spatial resolution of 10m.
