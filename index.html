@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️ 💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.">
-  <meta name="keywords" content="Population mapping, Population Density, Deep Learning, Weakly Supervised Learning, Sentinel-1, Sentinel-2">
+    content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️ 💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.">
+  <meta name="keywords"
+    content="Population mapping, Population Density, Deep Learning, Weakly Supervised Learning, Sentinel-1, Sentinel-2">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image:src" content="https://popcorn-population.github.io/images/popcorn_preview.jpg">
   <!-- <meta name="twitter:image:src" content="https://popcorn-population.github.io/images/POPCORN_transparent.png"> -->
   <meta name="twitter:title" content="Popcorn Population">
-  <meta name="twitter:description" content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.">
+  <meta name="twitter:description"
+    content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.">
   <meta name="twitter:creator" content="@nandometzger">
 
 
-<meta property="og:title" content="POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2" />
-<meta property="og:description" content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions." />
-<meta property="og:image" content="https://popcorn-population.github.io/images/popcorn_preview.jpg" />
-<!-- <meta property="og:image" content="https://popcorn-population.github.io/images/POPCORN_transparent.png" /> -->
-<meta property="og:url" content="https://popcorn-population.github.io/" />
-<meta property="og:type" content="website" />
+  <meta property="og:title" content="POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2" />
+  <meta property="og:description"
+    content="🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️💡TL;DR: POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions." />
+  <meta property="og:image" content="https://popcorn-population.github.io/images/popcorn_preview.jpg" />
+  <!-- <meta property="og:image" content="https://popcorn-population.github.io/images/POPCORN_transparent.png" /> -->
+  <meta property="og:url" content="https://popcorn-population.github.io/" />
+  <meta property="og:type" content="website" />
 
-<title>POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2</title>
+  <title>POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E97T3TQ2R6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E97T3TQ2R6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-E97T3TQ2R6');
-</script>
+    gtag('config', 'G-E97T3TQ2R6');
+  </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/bulma.min.css">
   <link rel="stylesheet" href="./css/bulma-carousel.min.css">
@@ -63,141 +66,167 @@
       }
     };
   </script>
-  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered"> 
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2 🌍🛰️</h1>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://nandometzger.github.io/" target="_blank" rel="noopener noreferrer">
-                Nando Metzger<sup>🏦</sup></a>,
-            </span>
-            <span class="author-block">
-              <a href="https://rcdaudt.github.io/" target="_blank" rel="noopener noreferrer">
-                Rodrigo Caye Daudt<sup>🏦</sup> </a>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.ch/citations?user=p3iJiLIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
-                Devis Tuia<sup>🍇</sup></a>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=FZuNgqIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                Konrad Schindler<sup>🏦</sup> </a>
-            </span>
-          </div>
-
-          <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>🏦</sup> Photogrammetry and Remote Sensing, ETH Zürich</span>
-          </div>
-          <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>🍇</sup>Environmental Computation Science and Earth Observation Laboratory, EPFL Sion</span>
-          </div>
-           
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0034425724004097" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf" style="color: orangered"></i>
-                  </span>
-                  <span>Remote Sensing of Environment Paper</span>
-                </a>
-              </span> 
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2311.14006" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf" style="color: orangered"></i>
-                  </span>
-                  <span>ArXiv Paper</span>
-                </a>
+            <h1 class="title is-1 publication-title">🍿POPCORN: High-resolution Population Maps Derived from Sentinel-1
+              and Sentinel-2 🌍🛰️</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://nandometzger.github.io/" target="_blank" rel="noopener noreferrer">
+                  Nando Metzger<sup>🏦</sup></a>,
               </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/prs-eth/popcorn" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+              <span class="author-block">
+                <a href="https://rcdaudt.github.io/" target="_blank" rel="noopener noreferrer">
+                  Rodrigo Caye Daudt<sup>🏦</sup> </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.ch/citations?user=p3iJiLIAAAAJ&hl=en&oi=ao" target="_blank"
+                  rel="noopener noreferrer">
+                  Devis Tuia<sup>🍇</sup></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FZuNgqIAAAAJ&hl=en" target="_blank"
+                  rel="noopener noreferrer">
+                  Konrad Schindler<sup>🏦</sup> </a>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>🏦</sup> Photogrammetry and Remote Sensing, ETH Zürich</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>🍇</sup>Environmental Computation Science and Earth Observation
+                Laboratory, EPFL Sion</span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S0034425724004097" target="_blank"
+                    rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf" style="color: orangered"></i>
+                    </span>
+                    <span>Remote Sensing of Environment Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2311.14006" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf" style="color: orangered"></i>
+                    </span>
+                    <span>ArXiv Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/prs-eth/popcorn" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a> 
-              </span>
-              <!-- GEE Link. -->
-              <span class="link-block">
-                <a href="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;"> <!-- Added background-color and border-radius -->
-                    <img src="./images/GEE_logo.png" alt="GEE Logo" style="height: 100%; object-fit: cover; object-position: center;">
-                  </span>
-                  <span>Earth Engine Demo</span>
-                </a>
-              </span>   
-              <span class="link-block">
-                <a href="https://code.earthengine.google.com/f90c3d3a77ec4dcfeb645457a87ddf48" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;"> <!-- Added background-color and border-radius -->
-                    <img src="./images/GEE_logo.png" alt="GEE Logo" style="height: 100%; object-fit: cover; object-position: center;">
-                  </span>
-                  <span>Earth Engine Data/Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://drive.google.com/drive/folders/1BEIrYL-n1lLQ_vvna5r0HRESpLaQMOfT?usp=drive_link" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;"> <!-- Added background-color and border-radius -->
-                    <img src="./images/globe2.jpg" alt="GEE Logo" style="height: 100%; object-fit: cover; object-position: center;">
-                  </span>
-                  <span>GIS friendly .tif Data</span>
-                </a>
-              </span>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- GEE Link. -->
+                <span class="link-block">
+                  <a href="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" target="_blank"
+                    rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"
+                      style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;">
+                      <!-- Added background-color and border-radius -->
+                      <img src="./images/GEE_logo.png" alt="GEE Logo"
+                        style="height: 100%; object-fit: cover; object-position: center;">
+                    </span>
+                    <span>Earth Engine Demo</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://code.earthengine.google.com/f90c3d3a77ec4dcfeb645457a87ddf48" target="_blank"
+                    rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"
+                      style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;">
+                      <!-- Added background-color and border-radius -->
+                      <img src="./images/GEE_logo.png" alt="GEE Logo"
+                        style="height: 100%; object-fit: cover; object-position: center;">
+                    </span>
+                    <span>Earth Engine Data/Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1BEIrYL-n1lLQ_vvna5r0HRESpLaQMOfT?usp=drive_link"
+                    target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"
+                      style="display: inline-block; width: 24px; height: 24px; overflow: hidden; background-color: #333; border-radius: 120%;">
+                      <!-- Added background-color and border-radius -->
+                      <img src="./images/globe2.jpg" alt="GEE Logo"
+                        style="height: 100%; object-fit: cover; object-position: center;">
+                    </span>
+                    <span>GIS friendly .tif Data</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="section pt-0">
-  <div class="container is-max-desktop">
-    <div class="columns">
-      <div class="column">
-        <blockquote class="markdown-quote">
-          <strong>💡TL;DR</strong><br>
-          POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.
-        </blockquote>
-      </div>
-    </div>  
-  </div>
-</section>
-
-
-
-<!-- Start of GEE App Embed -->
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-12">
-        <iframe src="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" width="100%" height="650" style="border: none;"></iframe>
-        High resolution population maps of Rwanda derived from Sentinel-1 and Sentinel-2
+  <section class="section pt-0">
+    <div class="container is-max-desktop">
+      <div class="notification is-warning is-light has-text-centered">
+        🥃 <strong>Bourbon follow-up is out!</strong> Even more performant than Popcorn while requiring <strong>only
+          Sentinel-2</strong> imagery.
+        <a href="https://github.com/nandometzger/bourbon" target="_blank"><strong>Check it out on GitHub!</strong></a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <!--
+  <section class="section pt-0">
+    <div class="container is-max-desktop">
+      <div class="columns">
+        <div class="column">
+          <blockquote class="markdown-quote">
+            <strong>💡TL;DR</strong><br>
+            POPCORN is a lightweight population mapping method using free satellite images and minimal data, surpassing
+            existing accuracy and providing interpretable maps for mapping populations in data-scarce regions.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Start of GEE App Embed -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-12">
+          <iframe src="https://ee-nandometzger.projects.earthengine.app/view/popcornv1-rwa" width="100%" height="650"
+            style="border: none;"></iframe>
+          High resolution population maps of Rwanda derived from Sentinel-1 and Sentinel-2
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
   
 <section class="section pt-0">
   <div class="container is-max-desktop"> 
@@ -233,132 +262,153 @@
 
   -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">🏋️ Performance</h2>
-        <div class="content has-text-justified">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">🏋️ Performance</h2>
+          <div class="content has-text-justified">
 
-          <p>
-            We evaluate the performance of POPCORN on three datasets: Switzerland, Rwanda, and Puerto Rico. 
-          </p> 
-        </div>
-          
-          <img id="method_train" width="100%" src="./images/all_scatter.png" alt="POPCORN scatter plott series"/>
-          
-        <div class="content has-text-justified">
-          <p> 
-            Our ensembled version BAG-OF-POPCORN outperforms existing methods including those with access to high-resolution satellite imagery and building footprints.
-          </p> 
-        </div>
+            <p>
+              We evaluate the performance of POPCORN on three datasets: Switzerland, Rwanda, and Puerto Rico.
+            </p>
+          </div>
 
-          <img id="method_train" width="60%" src="./images/swiss_table.png" alt="POPCORN Swiss Performance"/>
-          
-        </div>
-      </div>
-    </div>
-    <!--/ Method. -->
-  </div>
-</section>
+          <img id="method_train" width="100%" src="./images/all_scatter.png" alt="POPCORN scatter plott series" />
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">🛠️ How it works</h2>
-        <div class="content has-text-justified">
+          <div class="content has-text-justified">
+            <p>
+              Our ensembled version BAG-OF-POPCORN outperforms existing methods including those with access to
+              high-resolution satellite imagery and building footprints.
+              <strong>Update [Jan 2026]:</strong> Check out <strong><a href="https://github.com/nandometzger/bourbon"
+                  target="_blank">Bourbon 🥃</a></strong>, which achieves <strong>higher accuracy</strong> than the
+              original ensemble while relying <strong>exclusively on Sentinel-2</strong>!
+            </p>
+          </div>
 
-          <p>
-            The core of our method is a neural network model, termed POPCORN. It uses Sentinel-1, Sentinel-2 and a coarse population census outputs high-resolution population maps.
-          </p>
-          <img id="method_train" width="100%" src="./images/POPCORN_scheme_2.jpg" alt="POPCORN overview scheme"/>
-          
-          <p>
-            The model has two components:
-            (1) a pre-trained, frozen built-up area extractor;
-            and (2) a building occupancy module that we train through weak supervision with coarse census counts, as illustrated in the Figure below.
-            The model operates at the full Sentinel-1/-2 resolution, i.e., its output has a nominal spatial resolution of 10m.
-            However, for the final product and evaluation, we recommend aggregating the raw output to a 1ha (100x100m) grid, as done for the evaluation of the paper.
-          </p>
-
-          <img id="method_train" width="100%" src="./images/graphical_abstract.jpg" alt="Popcorn training scheme"/>
-
+          <img id="method_train" width="60%" src="./images/swiss_table.png" alt="POPCORN Swiss Performance" />
 
         </div>
       </div>
     </div>
     <!--/ Method. -->
-  </div>
-</section>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">🛠️ How it works</h2>
+          <div class="content has-text-justified">
+
+            <p>
+              The core of our method is a neural network model, termed POPCORN. It uses Sentinel-1, Sentinel-2 and a
+              coarse population census outputs high-resolution population maps.
+            </p>
+            <img id="method_train" width="100%" src="./images/POPCORN_scheme_2.jpg" alt="POPCORN overview scheme" />
+
+            <p>
+              The model has two components:
+              (1) a pre-trained, frozen built-up area extractor;
+              and (2) a building occupancy module that we train through weak supervision with coarse census counts, as
+              illustrated in the Figure below.
+              The model operates at the full Sentinel-1/-2 resolution, i.e., its output has a nominal spatial resolution
+              of 10m.
+              However, for the final product and evaluation, we recommend aggregating the raw output to a 1ha (100x100m)
+              grid, as done for the evaluation of the paper.
+            </p>
+
+            <img id="method_train" width="100%" src="./images/graphical_abstract.jpg" alt="Popcorn training scheme" />
+
+
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
 
 
 
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">📰 News</h2>
-        <!-- Adjusted list alignment -->
-        <ul style="list-style-type: disc; text-align: left; padding-left: 20px;">
-          <li>14th May 2024: Predictions for Switzerland (`che`), Rwanda (`rwa`), and Puerto Rico (`pricp2`) are now downloadable in `.tif` format. <a href="https://drive.google.com/drive/folders/1BEIrYL-n1lLQ_vvna5r0HRESpLaQMOfT?usp=drive_link" target="_blank">Download the data here</a>
-            .</li>
-          <li>12th May 2024: We updated the code base with our sparse head implementation. All experiments can now be run with <24GB GPU Memory.  <a href="https://github.com/prs-eth/popcorn/" target="_blank">View Code on GitHub</a>.</li>
-          <li>5th May 2024: We published the training code. <a href="https://github.com/prs-eth/popcorn/" target="_blank">View Code on GitHub</a>.</li>
-          <li>20th March 2024: We published the evaluation code and the pretrained models. <a href="https://github.com/prs-eth/popcorn/" target="_blank">View Code on GitHub</a>.</li>
-          <li>17th March 2024: Website is live. <a href="https://popcorn-population.github.io/" target="_blank">Visit Website</a>.</li>
-        </ul>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <h2 class="title is-3">📰 News</h2>
+          <!-- Adjusted list alignment -->
+          <ul style="list-style-type: disc; text-align: left; padding-left: 20px;">
+            <li><strong>10th Jan 2026</strong>: Introducing <strong>Bourbon 🥃</strong>, a new state-of-the-art model
+              that
+              achieves better accuracy than Popcorn using <strong>only Sentinel-2</strong> imagery! <a
+                href="https://github.com/nandometzger/bourbon" target="_blank">Check it out on GitHub</a>.</li>
+            <li>14th May 2024: Predictions for Switzerland (`che`), Rwanda (`rwa`), and Puerto Rico (`pricp2`) are now
+              downloadable in `.tif` format. <a
+                href="https://drive.google.com/drive/folders/1BEIrYL-n1lLQ_vvna5r0HRESpLaQMOfT?usp=drive_link"
+                target="_blank">Download the data here</a>
+              .</li>
+            <li>12th May 2024: We updated the code base with our sparse head implementation. All experiments can now be
+              run with <24GB GPU Memory. <a href="https://github.com/prs-eth/popcorn/" target="_blank">View Code on
+                GitHub</a>.</li>
+            <li>5th May 2024: We published the training code. <a href="https://github.com/prs-eth/popcorn/"
+                target="_blank">View Code on GitHub</a>.</li>
+            <li>20th March 2024: We published the evaluation code and the pretrained models. <a
+                href="https://github.com/prs-eth/popcorn/" target="_blank">View Code on GitHub</a>.</li>
+            <li>17th March 2024: Website is live. <a href="https://popcorn-population.github.io/" target="_blank">Visit
+                Website</a>.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-<section class="section pt-0" id="BibTeX">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
-        <h2 class="title">🎓 Citation</h2>
-        <div style="text-align: left;">
-          <pre class="selectable"><code>@article{metzger2023high,
+  <section class="section pt-0" id="BibTeX">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <h2 class="title">🎓 Citation</h2>
+          <div style="text-align: left;">
+            <pre class="selectable"><code>@article{metzger2023high,
   title={High-resolution Population Maps Derived from Sentinel-1 and Sentinel-2},
   author={Metzger, Nando and Daudt, Rodrigo Caye and Tuia, Devis and Schindler, Konrad},
   journal={arXiv preprint arXiv:2311.14006},
   year={2023} 
 }</code></pre>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<footer class="footer pt-4 pb-0">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Website template based on
-            <a href="https://github.com/nerfies/nerfies.github.io">
-              Nerfies
-            </a>
-            and licensed under
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-              CC-BY-SA-4.0
-            </a>.
-          </p>
+  <footer class="footer pt-4 pb-0">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website template based on
+              <a href="https://github.com/nerfies/nerfies.github.io">
+                Nerfies
+              </a>
+              and licensed under
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                CC-BY-SA-4.0
+              </a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
